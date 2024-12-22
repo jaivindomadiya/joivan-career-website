@@ -10,19 +10,35 @@
             height:360px;
             width: 100%;
             object-fit : cover;
+            margin-bottom : 16px;
         }
     </style>
 </head>
 <body>
+    {% include "nav.html" %}
+    <img class="img-fluid" id="banner" src="/static/home11.jpg">
+      
     <div class="container">
         <h1 class="text-center">{{company_name}} Careers </h1>
-        
-        <img class="img-fluid" id="banner" src="/static/home.jpg">
-        <h2 class="text-center">About Jovian</h2>
-        <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-            Why do we use it?
+
+        <div class="row" style="margin-top: 30px;margin-bottom: 30px">
+
+        <div class="col-md-6">
+            <p class="lead">Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry. Lorem Ipsum has been the industry's s
+                tandard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has su
+                rvived not only five centuries, but also the leap into electronic types
+                etting, remaining essentially unchanged. It was popularised in the 1960s with 
+                the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                Why do we use it?
+            </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/people.jpg" style="height:320px;border-radius:4px"> </div>
+        </div>
              <h2 class="text-center">Open Positions </h2>
-            
             <div>
                 {%for job in jobs%}
                    {% include "jobitem.html" %}
@@ -32,8 +48,7 @@
             <div class="text-center">
             <button  class="btn btn-primary">Contact us </button>
             </div>
-
-            <p class="text-center">CopyRight 2025 @Jaivin Domadiya </p>
     </div>
+    {% include "footer.html" %}
 </body>
 </html>
